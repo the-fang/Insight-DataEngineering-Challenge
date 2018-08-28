@@ -11,7 +11,7 @@ actual = [line.rstrip('\n') for line in actual]
 predict = open("./input/predicted.txt","r")
 predict = [line.rstrip('\n') for line in predict]
 window = open("./input/window.txt")
-window = int([line.rstrip('\n') for line in window])
+window = int(line.rstrip('\n') for line in window)
 file = open('./output/comparison.txt', 'w')
 #Creating matrices splitting at pipeline character
 for i in range(len(actual)):
