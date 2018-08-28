@@ -1,12 +1,18 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Sat Aug 25 19:01:14 2018
+
+@author: heman
+"""
 import itertools
 #Reading the input files line by line stripping off the newline character
 actual = open("./input/actmini.txt","r")
 actual = [line.rstrip('\n') for line in actual]
 predict = open("./input/predmini.txt","r")
 predict = [line.rstrip('\n') for line in predict]
-file = open('./output/comparision.txt', 'w')
 window = open("./input/window.txt")
 window = int([line.rstrip('\n') for line in window])
+file = open('./output/comparison.txt', 'w')
 #Creating matrices splitting at pipeline character
 for i in range(len(actual)):
     actual[i] = actual[i].split("|")
