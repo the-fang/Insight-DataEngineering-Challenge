@@ -6,9 +6,9 @@ Created on Sat Aug 25 19:01:14 2018
 """
 import itertools
 #Reading the input files line by line stripping off the newline character
-actual = open("./input/actmini.txt","r")
+actual = open("./input/actual.txt","r")
 actual = [line.rstrip('\n') for line in actual]
-predict = open("./input/predmini.txt","r")
+predict = open("./input/predicted.txt","r")
 predict = [line.rstrip('\n') for line in predict]
 window = open("./input/window.txt")
 window = int([line.rstrip('\n') for line in window])
