@@ -6,7 +6,7 @@ Finding the average error values between the actual stock prices and predicted v
 
 ### Programming Language Used:
 
-Python3
+Python 3.6
 
 ### Packages used:
 
