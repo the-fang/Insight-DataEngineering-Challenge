@@ -19,7 +19,7 @@ There are a total of 4 functions in this program:
 
 #### 1) reader(n):
 
-This function reads the lines of input files, strips them of \n characters and splits them at the occurence of pipeline.  
+This function reads the lines of input files, strips them of '\n' characters and splits them at the occurence of pipeline.  
 It takes file name as input.
 Returns a list of lists.
 
@@ -41,3 +41,6 @@ This function calculates the average error and prints to output file.
 It takes the error list generated in previous function, sliding window width, and max value.
 Writes to the output file comparison.txt.
 
+The program takes care of edge case where we do not have a match between actual and predicted stock values and prints in the format of A|B|NA 
+
+Using a couple of function calls the program would generate the required output file.
