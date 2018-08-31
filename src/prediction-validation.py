@@ -1,3 +1,4 @@
+#Function reads files and generates a nested list
 def reader(n):
     list = open(n,"r")
     list = [line.rstrip('\n') for line in list]
@@ -5,6 +6,7 @@ def reader(n):
         list[i] = list[i].split("|")
     return list
 
+#Function generates nested dictionary
 def nested_Dict(list,max):
     a = {}
     for k in range(1,max+1):
@@ -14,6 +16,7 @@ def nested_Dict(list,max):
                 a[k][(list[i][1])] = [list[i][2]]
     return a
 
+#Function generates stock price difference list
 def error_List(a,b,max):
     x = []
     for i in range(1,max+1):
@@ -22,6 +25,7 @@ def error_List(a,b,max):
     
     return x
 
+#Function generates output file
 def average_Error(a,window,max):
     for k in range(1,max+1):
         numerator = 0
@@ -38,12 +42,11 @@ def average_Error(a,window,max):
     return
     
                 
-file = open('out.txt', 'w')
-window = 4
+file = open('./output/comparison.txt', 'w')
 
-actual = reader("act.txt")
-
-predict = reader("pred.txt")
+actual = reader("./input/actual.txt")
+predict = reader("./input/predicted.txt")
+window = reader("./input/window.txt")
 
 max = int(predict[-1][0])
 
@@ -54,4 +57,6 @@ pred = nested_Dict(predict,max)
 error = error_List(act,pred,max)
 
 average_Error(error,window,max)
+
+file.close()
 
