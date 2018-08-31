@@ -40,3 +40,4 @@ Returns the error list.
 This function calculates the average error and prints to output file.
 It takes the error list generated in previous function, sliding window width, and max value.
 Writes to the output file comparison.txt.
+
